@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int variableGlobal = 100;
+
+int modificarValor(int);
+
+int main()
+{
+    int valor = 5000;
+
+    printf("Global desde el main %d\n", variableGlobal);
+    variableGlobal = 900;
+    valor = modificarValor(valor);
+    printf("VALOR %d\n", valor);
+       printf("Global desde el main %d\n", variableGlobal);
+    return 0;
+}
+int modificarValor(int variableGlobal) //Parametro por valor
+{
+    variableGlobal += 1000;
+
+    printf("Global desde la  funcion%d\n ", variableGlobal);
+
+    return variableGlobal;
+}
+
+
+
