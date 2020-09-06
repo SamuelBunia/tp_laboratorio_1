@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1599426231 source:c:\users\fravega\onedrive\escritorio\tps programacion 1c\tp_laboratorio_1\trabajopractico1\funciones.c
+	"funciones.h"
+
+1599426322 c:\users\fravega\onedrive\escritorio\tps programacion 1c\tp_laboratorio_1\trabajopractico1\funciones.h
+	<stdio.h>
+
+1599425800 source:c:\users\fravega\onedrive\escritorio\tps programacion 1c\tp_laboratorio_1\trabajopractico1\main.c
+	<stdio.h>
+	"funciones.h"
+
