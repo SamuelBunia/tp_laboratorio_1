@@ -19,35 +19,34 @@ long int CalcularFactorial(int numero)
 }
 
 //funcion sumar
-int SumarNumeros(int primerNumero, int segundoNumero)//Parametros formales
+float SumarNumeros(float primerNumero, float segundoNumero)//Parametros formales
 {
-    int suma;
+
+    float suma;
     suma = primerNumero + segundoNumero;
     return suma;
 }
 
 //funcion restar
-int RestarNumeros(int primerNumero, int segundoNumero){
-    int resta;
+float RestarNumeros(float primerNumero, float segundoNumero){
+    float resta;
     resta = primerNumero - segundoNumero;
     return resta;
 }
 
 //funcion multiplicar
-int MultiplicarNumeros(int primerNumero, int segundoNumero){
-    int multiplicacion;
+float MultiplicarNumeros(float primerNumero, float segundoNumero){
+    float multiplicacion;
     multiplicacion = primerNumero * segundoNumero;
     return multiplicacion;
 }
 
 //funcion dividir
-float DividirNumeros(int primerNumero, int segundoNumero){
+float DividirNumeros(float primerNumero, float segundoNumero){
     float division;
-    division = (float)primerNumero / segundoNumero;
+    division = primerNumero / segundoNumero;
     return division;
 }
-
-
 
 
 
