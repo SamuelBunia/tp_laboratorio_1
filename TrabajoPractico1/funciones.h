@@ -1,4 +1,14 @@
 #include <stdio.h>
+
+/** \brief funcion solo del menu, devuelva la opcion que agarre el usuario
+ *
+ * \param float numero1 a ingresar
+ * \param float numero2 a ingresar
+ * \return void la opcion que ingreso
+ *
+ */
+void MostrarMenu(float, float);
+
 /** \brief Ingreso dos numeros flotantes, los somo y me devuelve un flotante
  *
  * \param primerNumero float
@@ -46,7 +56,3 @@ float DividirNumeros(float, float);
  *
  */
 long int CalcularFactorial(int);
-
-
-
-
