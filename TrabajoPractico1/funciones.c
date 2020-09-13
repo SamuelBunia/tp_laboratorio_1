@@ -2,7 +2,7 @@
 //funcion menu
 void MostrarMenu(float numero1, float numero2)
 {
-        printf("\n        *CALCULADORA TP1* \n\n");
+        printf("\n \t*CALCULADORA TP1* \n\n");
         printf("|1. Ingresar 1er operando A=%.2f| \n", numero1);
         printf("|2. Ingresar 2do operando B=%.2f| \n", numero2);
         printf("|3. Calcular todas las operaciones| \n");

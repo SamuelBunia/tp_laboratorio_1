@@ -1,10 +1,7 @@
 /*******************************************************************
 * Programa: Calculadora
-*
-* Objetivo: Resolver Operaciones Matematicás y validar
-*
+* Objetivo: Resolver Operaciones Matematicos y validar errores posibles
 * Version: 11 de Septiembre de 2020
-*
 * Alumno: Samuel Bunia 1C
 ********************************************************************/
 #include <stdio.h>
@@ -28,16 +25,13 @@ int main()
     int flagOpcion2;
     int flagOpcion3;
     int opcionSeleccionada;
-
     numero1 = 0;
     numero2 = 0;
     flagOpcion1 = 0;
     flagOpcion2 = 0;
     flagOpcion3 = 0;
 
-    do
-    {
-
+    do{
         MostrarMenu(numero1, numero2);
         printf("Seleccione una opcion: ");
         scanf("%d",&opcionSeleccionada);
@@ -50,7 +44,6 @@ int main()
             scanf("%f", &numero1);
             numeroEntero1 = (int)numero1-numero1;
             flagOpcion1 = 1;
-
         break;
         case 2:
             printf("Ingrese 2do numero: ");
@@ -58,8 +51,7 @@ int main()
             scanf("%f", &numero2);
             numeroEntero2 = (int)numero2-numero2;
             flagOpcion2 = 1;
-            break;
-
+        break;
         case 3:
             if(flagOpcion1==0&&flagOpcion2==0)
             {
@@ -81,7 +73,6 @@ int main()
                 flagOpcion3 = 1;
             }
         break;
-
         case 4:
             if(flagOpcion3==0)
             {
@@ -98,7 +89,6 @@ int main()
                     printf("Los resultado son: \n");
                     /*A*/printf("A.-El resultado de (A+B) %.2f mas %.2f es: %.2f \n", numero1, numero2, suma);
                     /*B*/printf("B.-El resultado de (A-B) %.2f menos %.2f es: %.2f \n", numero1, numero2, resta);
-
                     /*C*/if(numero1==0||numero2==0)
                     {
                         printf("C.-No es posible dividir por cero\n");
@@ -109,7 +99,6 @@ int main()
                     }
 
                     /*D*/printf("D.-El resultado de (A*B) %.2f por %.2f es: %.2f \n", numero1, numero2, multiplicacion);
-
                     /*E*/if(numeroEntero1==0&&numero1>0){//primer numero
                         printf("E.-El factorial de %.2f es: %ld ", numero1, factorial1);
                     }else{
@@ -126,7 +115,7 @@ int main()
         break;
         case 5:
             printf("\t!!GRACIAS POR USAR LA CALCULADORA!!\n");
-            break;
+        break;
         }
     }
     while(opcionSeleccionada>=1 && opcionSeleccionada<=4);

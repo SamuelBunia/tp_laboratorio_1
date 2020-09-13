@@ -9,7 +9,7 @@
  */
 void MostrarMenu(float, float);
 
-/** \brief Ingreso dos numeros flotantes, los somo y me devuelve un flotante
+/** \brief funcion sumar, Ingreso dos numeros flotantes, los somo y me devuelve un flotante
  *
  * \param primerNumero float
  * \param segundoNumero float
@@ -49,8 +49,8 @@ float MultiplicarNumeros(float , float);
 float DividirNumeros(float, float);
 
 
-/** \brief ingreso un numero, igualo variable de control al numero y voy disminuyendo, multiplico y guardo mi numero factorial
- *
+/** \brief funcion factorial ingreso un numero, igualo variable de control al numero y voy disminuyendo,
+ *  multiplico y guardo mi numero factorial
  * \param numero int numero que ingrese el usuario
  * \return long int variable factorial
  *
