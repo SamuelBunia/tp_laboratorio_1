@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1601589380 source:c:\users\fravega\onedrive\escritorio\tps programacion 1c\tp_laboratorio_1\trabajopractico2\arrayemployees.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h"
+	<ctype.h>
+	<string.h>
+
+1601571067 c:\users\fravega\onedrive\escritorio\tps programacion 1c\tp_laboratorio_1\trabajopractico2\arrayemployees.h
+	<stdio.h>
+
+1601571158 source:c:\users\fravega\onedrive\escritorio\tps programacion 1c\tp_laboratorio_1\trabajopractico2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h"
+	<ctype.h>
+	<string.h>
+
