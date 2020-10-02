@@ -10,14 +10,22 @@ int sector;
 int isEmpty;
 }eEmployee;
 
-void MostrarMenu(int );
+
+int MostrarMenu(eEmployee[], int, int);
 int initEmployees(eEmployee miEmpleado[], int);
-void MostrarUnEmpleado(eEmployee);
-void CargarTodosLosEmpleados(eEmployee[], int);
-void MostrarNominaDeEmpleados(eEmployee[], int);
-void OrdenarEmpleadosPorId(eEmployee[], int);
-int buscarLibre(eEmployee[], int);
+int addEmployee(eEmployee[], int);
+int modifyEmployee(eEmployee[], int, int);
+int findEmployeeById(eEmployee[], int, int);
+int removeEmployee(eEmployee[], int, int);
+int sortEmployees(eEmployee[], int, int);
+int printEmployees(eEmployee[], int);
 eEmployee cargarEmpleado();
+int buscarLibre(eEmployee[], int);
+void reportResults();
+
+void MostrarUnEmpleado(eEmployee);
+void OrdenarEmpleadosPorId(eEmployee[], int);
+
 
 
 
