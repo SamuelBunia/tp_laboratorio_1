@@ -1,15 +1,15 @@
 # depslib dependency file v1.0
-1601607110 source:c:\users\fravega\onedrive\escritorio\tps programacion 1c\tp_laboratorio_1\trabajopractico2\arrayemployees.c
+1601686997 source:c:\users\fravega\onedrive\escritorio\tps programacion 1c\tp_laboratorio_1\trabajopractico2\arrayemployees.c
 	<stdio.h>
 	<stdlib.h>
 	"ArrayEmployees.h"
 	<ctype.h>
 	<string.h>
 
-1601606988 c:\users\fravega\onedrive\escritorio\tps programacion 1c\tp_laboratorio_1\trabajopractico2\arrayemployees.h
+1601687455 c:\users\fravega\onedrive\escritorio\tps programacion 1c\tp_laboratorio_1\trabajopractico2\arrayemployees.h
 	<stdio.h>
 
-1601606728 source:c:\users\fravega\onedrive\escritorio\tps programacion 1c\tp_laboratorio_1\trabajopractico2\main.c
+1601687074 source:c:\users\fravega\onedrive\escritorio\tps programacion 1c\tp_laboratorio_1\trabajopractico2\main.c
 	"ArrayEmployees.h"
 	<ctype.h>
 	<string.h>

@@ -12,9 +12,9 @@ int isEmpty;
 
 
 int MostrarMenu(eEmployee[], int, int);
-int initEmployees(eEmployee miEmpleado[], int);
+int initEmployees(eEmployee [], int);
 int addEmployee(eEmployee[], int);
-int modifyEmployee(eEmployee[], int, int);
+void modifyEmployee(eEmployee[], int, int);
 int findEmployeeById(eEmployee[], int, int);
 int removeEmployee(eEmployee[], int, int);
 int sortEmployees(eEmployee[], int, int);
@@ -22,9 +22,10 @@ int printEmployees(eEmployee[], int);
 eEmployee cargarEmpleado();
 int buscarLibre(eEmployee[], int);
 void reportResults();
-
 void MostrarUnEmpleado(eEmployee);
-void OrdenarEmpleadosPorId(eEmployee[], int);
+void OrdenarEmpleados(eEmployee[], int);
+int allSalaries(eEmployee[], int);
+int promedioSueldo(eEmployee[], int);
 
 
 
