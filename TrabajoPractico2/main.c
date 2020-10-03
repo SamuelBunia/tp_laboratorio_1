@@ -1,3 +1,9 @@
+/*******************************************************************
+* Programa: Nomina Empleados
+* Objetivo: Hacer un AMB e imprimir
+* Version: 02 de Octubre de 2020
+* Alumno: Samuel Bunia 1C
+********************************************************************/
 #include "ArrayEmployees.h"
 #include <ctype.h>
 #include <string.h>
