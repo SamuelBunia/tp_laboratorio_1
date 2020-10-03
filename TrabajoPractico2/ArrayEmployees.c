@@ -5,12 +5,16 @@
 #include <string.h>
 
 int id = 100;
-int auxiliar=0;
+int auxiliar =0;
+int flag1 = 0;
+
+
 
 //MENU
 int MostrarMenu(eEmployee listaEmpleados[], int opcionSeleccionada, int cant)
 {
-    //int selectedId;
+    float promedioTodosSueldos;
+    float sumaSueldos;
     int case4;
     printf("\n\t°°°NOMINA DE EMPLEADOS TP2°°° \n\n");
     printf("|  1. Ingresar un nuevo Empleado     | \n");
@@ -25,22 +29,44 @@ int MostrarMenu(eEmployee listaEmpleados[], int opcionSeleccionada, int cant)
     {
     case 1:
         addEmployee(listaEmpleados, cant);
-        break;
+        system("pause");
+        system("cls");
+        flag1=1;
+    break;
 
     case 2:
+        if(flag1==1)
+        {
         printEmployees(listaEmpleados, cant);
         printf("\t==========================\n");
         modifyEmployee(listaEmpleados, cant, id);
-        break;
+        }else{
+            printf("No hay ningun empleado cargado\n");
+        }
+        system("pause");
+        system("cls");
+    break;
 
     case 3:
+        if(flag1==1)
+        {
+
         printEmployees(listaEmpleados, cant);
         printf("\t==========================\n");
         removeEmployee(listaEmpleados, cant, id);
-        break;
+        }else{
+            printf("No hay ningun empleado cargado\n");
+        }
+        system("pause");
+        system("cls");
+    break;
 
     case 4:
-        printf("¿Que quieres informar?\n 1. Listado de los empleados ordenados alfabéticamente por Apellido y Sector.\n 2. Total y promedio de los salarios, y cuántos empleados superan el salario promedio\n");
+        if(flag1==1)
+        {
+
+
+        printf("\tQue quieres informar?\n 1. Listado de los empleados ordenados alfabéticamente por Apellido y Sector.\n 2. Total y promedio de los salarios, y cuántos empleados superan el salario promedio\n");
         scanf("%d", &case4);
 
         switch(case4)
@@ -51,17 +77,23 @@ int MostrarMenu(eEmployee listaEmpleados[], int opcionSeleccionada, int cant)
             break;
 
             case 2:
-                allSalaries(listaEmpleados, cant);
-                promedioSueldo(listaEmpleados, cant));
+                sumaSueldos = allSalaries(listaEmpleados, cant);
+                promedioTodosSueldos = promedioSueldo(listaEmpleados, cant, sumaSueldos);
+                printf("La suma de todos los sueldos es: %.2f\n", sumaSueldos);
+                printf("El promedio de todos los sueldos es: %.2f", promedioTodosSueldos);
             break;
 
         }
-        reportResults();
+        }else{
+            printf("No hay ningun empleado cargado\n");
+        }
+        system("pause");
+        system("cls");
     break;
 
     case 5:
         printf("\t\n!!GRACIAS POR USAR NUESTRO PROGRAMA, HASTA LUEGO!!\n");
-        break;
+    break;
     }
 
     return opcionSeleccionada;
@@ -90,7 +122,7 @@ int addEmployee(eEmployee listaEmpleados[], int cant)
     if(i!=-1)
     {
         listaEmpleados[i] = cargarEmpleado();
-        //printf("%d\n",listaEmpleados[i].isEmpty);
+
     }
     else
     {
@@ -119,7 +151,8 @@ void modifyEmployee(eEmployee listaEmpleados[], int cant, int selectedId)
         {
             if(listaEmpleados[i].id == selectedId && listaEmpleados[i].isEmpty != 1)
             {
-                printf("¿Que desea modificar? 1. Nombre.\n 2. Apellido.\n 3. Salario.\n 4. Sector\n. 5. Salir\n.");
+                printf("\tQue desea modificar?\n 1. Nombre.\n 2. Apellido.\n 3. Salario.\n 4. Sector\n. 5. Salir\n.");
+                printf("Seleccione opcion: ");
                 scanf("%d", &modificar);
 
                     switch(modificar)
@@ -227,6 +260,7 @@ int sortEmployees(eEmployee listaEmpleados[], int cant, int order)
 int printEmployees(eEmployee listaEmpleados[], int cant)
 {
     int i;
+    printf("\t|°°°ID\t  NOMBRE\t APELLIDO\tSUELDO\tSECTOR°°°|\n\n");
     for(i=0; i<cant; i++)
     {
         if(listaEmpleados[i].isEmpty==0)
@@ -283,7 +317,8 @@ int buscarLibre(eEmployee listaEmpleado[], int cant)
 //mostrar un empleado
 void MostrarUnEmpleado(eEmployee unEmpleado)
 {
-    printf("\n*ID-%2d *Nombre: %5s *Apellido: %5s *Salario: %.2f *Sector: %1d\n", unEmpleado.id, unEmpleado.name, unEmpleado.lastName, unEmpleado.salary, unEmpleado.sector);
+
+    printf("\t|%4d\t%8s\t%8s\t%5.2f\t  %3d |\n", unEmpleado.id, unEmpleado.name, unEmpleado.lastName, unEmpleado.salary, unEmpleado.sector);
 }
 
 //Ordenar los empleados por id
@@ -323,29 +358,25 @@ int allSalaries(eEmployee listaEmpleados[], int cant)
 
     for(i=0;i<cant;i++)
     {
-       if(listaEmpleados[i].isEmpty != 1)
+       if(listaEmpleados[i].isEmpty == 0)
        {
 
         contador = contador + listaEmpleados[i].salary;
 
         auxiliar++;
-
        }
     }
     return contador;
 }
 
 //promedio de los sueldos
-int promedioSueldo(eEmployee listaEmpleados[], int cant)
+int promedioSueldo(eEmployee listaEmpleados[], int cant, float acumulador)
 {
-   float acumulador;
    float resultado;
 
-    acumulador = allSalaries(listaEmpleados, cant);
     resultado = (float)acumulador / auxiliar;
-
+    auxiliar=0;
    return resultado;
-
 }
 
 

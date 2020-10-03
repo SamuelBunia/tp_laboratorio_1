@@ -7,7 +7,7 @@
 #include "ArrayEmployees.h"
 #include <ctype.h>
 #include <string.h>
-#define CANT 3
+#define CANT 1000
 
 int main()
 {
