@@ -83,7 +83,7 @@ int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
         }
         correcto=1;
     }
-
+    fclose(pFile);
     return correcto;
 }
 
@@ -137,7 +137,7 @@ void AccionMenu(int opcionSeleccionada)
         {
         case 1:
             controller_ListEmployee(pArrayListEmployee);
-            parser_EmployeeFromText(pFile,pArrayListEmployee);
+            //parser_EmployeeFromText(pFile,pArrayListEmployee);
             system("pause");
             system("cls");
         break;
@@ -148,6 +148,7 @@ void AccionMenu(int opcionSeleccionada)
         break;
         case 3:
 
+            //if(feof(pFile)) { break;
             system("pause");
             system("cls");
         break;
